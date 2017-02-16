@@ -39,63 +39,63 @@ include_directories(
 
 
 
-add_executable(
-  detect_leg_clusters 
-  src/detect_leg_clusters.cpp
-  src/laser_processor.cpp
-  src/cluster_features.cpp
-)
-target_link_libraries(
-  detect_leg_clusters 
-  ${catkin_LIBRARIES}
-)
-
-
-add_executable(
-  local_occupancy_grid_mapping
-  src/local_occupancy_grid_mapping.cpp
-  src/laser_processor.cpp
-)
-target_link_libraries(
-  local_occupancy_grid_mapping 
-  ${catkin_LIBRARIES}
-)
-
-
-add_executable(
-  extract_positive_training_clusters
-  src/extract_positive_training_clusters.cpp
-  src/laser_processor.cpp
-)
-target_link_libraries(
-  extract_positive_training_clusters
-  ${catkin_LIBRARIES}
-)
-
-
-add_executable(
-  train_leg_detector
-  src/train_leg_detector.cpp
-  src/laser_processor.cpp
-  src/cluster_features.cpp  
-)
-target_link_libraries(
-  train_leg_detector
-  ${catkin_LIBRARIES}
-)
-
-add_dependencies(local_occupancy_grid_mapping ${PROJECT_NAME}_generate_messages_cpp)
-add_dependencies(local_occupancy_grid_mapping ${PROJECT_NAME}_gencpp)
-add_dependencies(local_occupancy_grid_mapping ${PROJECT_NAME}_gencfg)
-add_dependencies(detect_leg_clusters ${PROJECT_NAME}_generate_messages_cpp)
-add_dependencies(detect_leg_clusters ${PROJECT_NAME}_gencpp)
-add_dependencies(detect_leg_clusters ${PROJECT_NAME}_gencfg)
-add_dependencies(extract_positive_training_clusters ${PROJECT_NAME}_generate_messages_cpp)
-add_dependencies(extract_positive_training_clusters ${PROJECT_NAME}_gencpp)
-add_dependencies(extract_positive_training_clusters ${PROJECT_NAME}_gencfg)
-add_dependencies(train_leg_detector ${PROJECT_NAME}_generate_messages_cpp)
-add_dependencies(train_leg_detector ${PROJECT_NAME}_gencpp)
-add_dependencies(train_leg_detector ${PROJECT_NAME}_gencfg)
+#add_executable(
+#  detect_leg_clusters 
+#  src/detect_leg_clusters.cpp
+#  src/laser_processor.cpp
+#  src/cluster_features.cpp
+#)
+#target_link_libraries(
+#  detect_leg_clusters 
+#  ${catkin_LIBRARIES}
+#)
+#
+#
+#add_executable(
+#  local_occupancy_grid_mapping
+#  src/local_occupancy_grid_mapping.cpp
+#  src/laser_processor.cpp
+#)
+#target_link_libraries(
+#  local_occupancy_grid_mapping 
+#  ${catkin_LIBRARIES}
+#)
+#
+#
+#add_executable(
+#  extract_positive_training_clusters
+#  src/extract_positive_training_clusters.cpp
+#  src/laser_processor.cpp
+#)
+#target_link_libraries(
+#  extract_positive_training_clusters
+#  ${catkin_LIBRARIES}
+#)
+#
+#
+#add_executable(
+#  train_leg_detector
+#  src/train_leg_detector.cpp
+#  src/laser_processor.cpp
+#  src/cluster_features.cpp  
+#)
+#target_link_libraries(
+#  train_leg_detector
+#  ${catkin_LIBRARIES}
+#)
+#
+#add_dependencies(local_occupancy_grid_mapping ${PROJECT_NAME}_generate_messages_cpp)
+#add_dependencies(local_occupancy_grid_mapping ${PROJECT_NAME}_gencpp)
+#add_dependencies(local_occupancy_grid_mapping ${PROJECT_NAME}_gencfg)
+#add_dependencies(detect_leg_clusters ${PROJECT_NAME}_generate_messages_cpp)
+#add_dependencies(detect_leg_clusters ${PROJECT_NAME}_gencpp)
+#add_dependencies(detect_leg_clusters ${PROJECT_NAME}_gencfg)
+#add_dependencies(extract_positive_training_clusters ${PROJECT_NAME}_generate_messages_cpp)
+#add_dependencies(extract_positive_training_clusters ${PROJECT_NAME}_gencpp)
+#add_dependencies(extract_positive_training_clusters ${PROJECT_NAME}_gencfg)
+#add_dependencies(train_leg_detector ${PROJECT_NAME}_generate_messages_cpp)
+#add_dependencies(train_leg_detector ${PROJECT_NAME}_gencpp)
+#add_dependencies(train_leg_detector ${PROJECT_NAME}_gencfg)
 
 
 install(
